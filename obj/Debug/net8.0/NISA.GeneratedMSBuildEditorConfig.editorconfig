@@ -24,3 +24,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/ammo/Desktop/NISA/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/ammo/Desktop/NISA/Views/NewPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
