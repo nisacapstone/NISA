@@ -9,20 +9,9 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="NISA"
         Background="#7393B3">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <StackPanel Width="200" Margin="16" Spacing="10">
-        <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button HorizontalAlignment="Center" Click="ButtonOnClick">CLICK ME</Button> 
-    </StackPanel>
-
     <Grid>
         <ContentControl x:Name="ContentArea" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
     
+
 </Window>
