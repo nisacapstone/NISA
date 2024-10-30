@@ -67,3 +67,6 @@
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.csproj.Up2Date
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.genruntimeconfig.cache
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/ref/NISA.dll
+/Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.dll
+/Users/ammo/Desktop/NISA/obj/Debug/net8.0/refint/NISA.dll
+/Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.pdb
