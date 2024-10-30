@@ -1,7 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="NISA.Views.LandingPage"
-             Background="#A0C4FF">
+             Background="#7393B3">
 
     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <!-- Logo -->
