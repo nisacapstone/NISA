@@ -15,18 +15,18 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NISA
-build_property.ProjectDir = /Users/safa/repo/School/CMPT/Cmpt272/NISA/
+build_property.ProjectDir = /Users/ammo/Desktop/NISA/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/Users/safa/repo/School/CMPT/Cmpt272/NISA/App.axaml]
+[/Users/ammo/Desktop/NISA/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/safa/repo/School/CMPT/Cmpt272/NISA/Views/LandingPage.axaml]
+[/Users/ammo/Desktop/NISA/Views/LandingPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/safa/repo/School/CMPT/Cmpt272/NISA/Views/MainWindow.axaml]
+[/Users/ammo/Desktop/NISA/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/safa/repo/School/CMPT/Cmpt272/NISA/Views/NewPage.axaml]
+[/Users/ammo/Desktop/NISA/Views/NewPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
