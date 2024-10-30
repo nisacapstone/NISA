@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj": {}
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {}
   },
   "projects": {
-    "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj": {
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj",
+        "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
         "projectName": "NISA",
-        "projectPath": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj",
-        "packagesPath": "/Users/safa/.nuget/packages/",
-        "outputPath": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/",
+        "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
+        "packagesPath": "/Users/nadineissa/.nuget/packages/",
+        "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/safa/.nuget/NuGet/NuGet.Config"
+          "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
