@@ -4,24 +4,20 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using NISA.Views;
 
-namespace NISA.Views;
-
-public partial class MainWindow : Window
+namespace NISA.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-    }
-
-    public void NavigateTo(object view)
+        public MainWindow()
         {
-            ContentArea.Content = view;
+            InitializeComponent();
+            // Load the LandingPage by default
+            NavigateTo(new LandingPage());
         }
 
-    private void ButtonOnClick(object? sender, RoutedEventArgs e)
-    {
-    
-        MainWindow.NavigateTo(); // Navigate to Page2
-
+        public void NavigateTo(UserControl view)
+        {
+            ContentArea.Content = view; // Set the new view
+        }
     }
 }
