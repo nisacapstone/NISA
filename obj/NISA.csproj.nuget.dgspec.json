@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "/Users/ammo/Desktop/NISA/NISA.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ammo/.nuget/NuGet/NuGet.Config"
+=======
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {}
+  },
+  "projects": {
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
+        "projectName": "NISA",
+        "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
+        "packagesPath": "/Users/nadineissa/.nuget/packages/",
+        "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
+>>>>>>> 659d4ed3851bc3aac6ab1140f8345a90fe84aa19
         ],
         "originalTargetFrameworks": [
           "net8.0"
