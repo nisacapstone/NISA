@@ -1520,19 +1520,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/safa/.nuget/packages/": {}
+<<<<<<< HEAD
+    "/Users/ammo/.nuget/packages/": {}
+=======
+    "/Users/nadineissa/.nuget/packages/": {}
+>>>>>>> 659d4ed3851bc3aac6ab1140f8345a90fe84aa19
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/ammo/Desktop/NISA/NISA.csproj",
       "projectName": "NISA",
-      "projectPath": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/NISA.csproj",
-      "packagesPath": "/Users/safa/.nuget/packages/",
-      "outputPath": "/Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/",
+      "projectPath": "/Users/ammo/Desktop/NISA/NISA.csproj",
+      "packagesPath": "/Users/ammo/.nuget/packages/",
+      "outputPath": "/Users/ammo/Desktop/NISA/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/safa/.nuget/NuGet/NuGet.Config"
+        "/Users/ammo/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
+      "projectName": "NISA",
+      "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
+      "packagesPath": "/Users/nadineissa/.nuget/packages/",
+      "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
+>>>>>>> 659d4ed3851bc3aac6ab1140f8345a90fe84aa19
       ],
       "originalTargetFrameworks": [
         "net8.0"

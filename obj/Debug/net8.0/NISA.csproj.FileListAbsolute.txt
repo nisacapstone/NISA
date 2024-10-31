@@ -67,6 +67,8 @@
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.csproj.Up2Date
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/NISA.genruntimeconfig.cache
 /Users/ammo/Desktop/NISA/obj/Debug/net8.0/ref/NISA.dll
+<<<<<<< HEAD
+=======
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/NISA.csproj.AssemblyReference.cache
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/Avalonia/resources
@@ -136,3 +138,4 @@
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/NISA.csproj.Up2Date
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/NISA.genruntimeconfig.cache
 /Users/safa/repo/School/CMPT/Cmpt272/NISA/obj/Debug/net8.0/ref/NISA.dll
+>>>>>>> 0cfc373386e5daeb56ad620d1bf252d5079038f1

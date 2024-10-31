@@ -6,7 +6,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Input;
 
-
+// nadine was here
 
 namespace NISA.Views
 {
@@ -20,7 +20,6 @@ namespace NISA.Views
         private void OnCorrugatedHornClick(object? sender, PointerPressedEventArgs e)
         {
             // Use a reference to the main window or a navigation service to navigate
-            //Console.WriteLine("Button clicked!"); // Debug message
 
             var mainWindow = (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow as MainWindow; // Get the main window instance
             mainWindow?.NavigateTo(new NewPage()); // Navigate to NewPage
@@ -28,8 +27,6 @@ namespace NISA.Views
 
         private void OnCrossGuideCouplerClick(object? sender, PointerPressedEventArgs e)
         {
-            // Use a reference to the main window or a navigation service to navigate
-            //Console.WriteLine("Button clicked!"); // Debug message
 
             var mainWindow = (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow as MainWindow; // Get the main window instance
             mainWindow?.NavigateTo(new NewPage()); // Navigate to NewPage
