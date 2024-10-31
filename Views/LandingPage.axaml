@@ -5,19 +5,26 @@
 
     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <!-- Logo -->
-        <TextBlock Text="LOGO" FontSize="32" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+       <Image Source="/Assets/NISALogo.png" Width="100" Height="150" HorizontalAlignment="Center"/> 
+        <!-- <TextBlock Text="LOGO" FontSize="32" HorizontalAlignment="Center" Margin="0,20,0,10"/> -->
 
         <!-- Welcome Message -->
-        <TextBlock Text="Welcome to the Landing Page!" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/>
+        <!-- <TextBlock Text="Welcome to the Landing Page!" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/> -->
 
         <!-- Spacer for vertical centering -->
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,0,20" Height="300">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Border Background="White" Width="200" Height="100" Margin="10" CornerRadius="5" PointerPressed="OnCorrugatedHornClick">
-                    <TextBlock Text="Corrugated Horn" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black"/>
+                <Border Background="White" Width="200" Height="200" Margin="10" CornerRadius="5" PointerPressed="OnCorrugatedHornClick">
+                    <StackPanel>
+                        <Image Source="/Assets/CorrugatedHornAntenna.png" Width="100" Height="150" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Corrugated Horn" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black"/>
+                    </StackPanel>
                 </Border>
-                <Border Background="White" Width="200" Height="100" Margin="10" CornerRadius="5" PointerPressed="OnCrossGuideCouplerClick">
-                    <TextBlock Text="Cross guide coupler" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black"/>
+                <Border Background="White" Width="200" Height="200" Margin="10" CornerRadius="5" PointerPressed="OnCrossGuideCouplerClick">
+                    <StackPanel>
+                        <Image Source="/Assets/CrossGuideCoupler.jpg" Width="100" Height="150" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Cross guide coupler" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black"/>
+                    </StackPanel>
                 </Border>
             </StackPanel>
         </StackPanel>
