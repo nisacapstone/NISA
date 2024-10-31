@@ -11,6 +11,7 @@ namespace NISA.Views
         public MainWindow()
         {
             InitializeComponent();
+            // ShowSplashScreen();
             // Load the LandingPage by default
             NavigateTo(new LandingPage());
         }
@@ -19,5 +20,12 @@ namespace NISA.Views
         {
             ContentArea.Content = view; // Set the new view
         }
+        // private async void ShowSplashScreen()
+        // {
+        //     var splash = new SplashScreen();
+        //     Content = splash; // Set the splash screen as the content
+        //     await splash.ShowSplashScreenAsync(); // Show splash for a few seconds
+        //     Content = new LandingPage(); // After splash, load the main content
+        // }
     }
 }
