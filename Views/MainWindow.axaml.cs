@@ -15,7 +15,7 @@ namespace NISA.Views
             // Load the LandingPage by default
             NavigateTo(new LandingPage());
 
-            this.WindowState = WindowState.FullScreen;
+            this.WindowState = WindowState.Maximized;
         }
 
         public void NavigateTo(UserControl view)
