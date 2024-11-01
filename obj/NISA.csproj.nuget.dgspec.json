@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "/Users/ammo/Desktop/NISA/NISA.csproj": {}
+    "/Users/sahra242/NISA/NISA.csproj": {}
   },
   "projects": {
-    "/Users/ammo/Desktop/NISA/NISA.csproj": {
+    "/Users/sahra242/NISA/NISA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ammo/Desktop/NISA/NISA.csproj",
+        "projectUniqueName": "/Users/sahra242/NISA/NISA.csproj",
         "projectName": "NISA",
-        "projectPath": "/Users/ammo/Desktop/NISA/NISA.csproj",
-        "packagesPath": "/Users/ammo/.nuget/packages/",
-        "outputPath": "/Users/ammo/Desktop/NISA/obj/",
+        "projectPath": "/Users/sahra242/NISA/NISA.csproj",
+        "packagesPath": "/Users/sahra242/.nuget/packages/",
+        "outputPath": "/Users/sahra242/NISA/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ammo/.nuget/NuGet/NuGet.Config"
-=======
-    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {}
-  },
-  "projects": {
-    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
-        "projectName": "NISA",
-        "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
-        "packagesPath": "/Users/nadineissa/.nuget/packages/",
-        "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
->>>>>>> 659d4ed3851bc3aac6ab1140f8345a90fe84aa19
+          "/Users/sahra242/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -49,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -101,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.8_1/libexec/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
