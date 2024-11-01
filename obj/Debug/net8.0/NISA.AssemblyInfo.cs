@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NISA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e87b192c1b54ca521cd16aaa442ce216e4c66245")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cfc373386e5daeb56ad620d1bf252d5079038f1")]
->>>>>>> 659d4ed3851bc3aac6ab1140f8345a90fe84aa19
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a503217ffe4c8848c934a6d3eb290b119dcb644")]
 [assembly: System.Reflection.AssemblyProductAttribute("NISA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NISA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

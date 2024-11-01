@@ -14,6 +14,8 @@ namespace NISA.Views
             // ShowSplashScreen();
             // Load the LandingPage by default
             NavigateTo(new LandingPage());
+
+            this.WindowState = WindowState.FullScreen;
         }
 
         public void NavigateTo(UserControl view)

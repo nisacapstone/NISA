@@ -21,14 +21,18 @@ namespace NISA.Views
         {
             // Use a reference to the main window or a navigation service to navigate
 
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             var mainWindow = (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow as MainWindow; // Get the main window instance
-            mainWindow?.NavigateTo(new NewPage()); // Navigate to NewPage
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+            mainWindow?.NavigateTo(new CorrugatedHorn()); // Navigate to NewPage
         }
 
         private void OnCrossGuideCouplerClick(object? sender, PointerPressedEventArgs e)
         {
 
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             var mainWindow = (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow as MainWindow; // Get the main window instance
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             mainWindow?.NavigateTo(new NewPage()); // Navigate to NewPage
         }
 

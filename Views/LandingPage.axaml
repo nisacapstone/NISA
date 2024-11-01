@@ -5,7 +5,7 @@
 
     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <!-- Logo -->
-       <Image Source="/Assets/NISALogo.png" Width="100" Height="150" HorizontalAlignment="Center"/> 
+       <Image Source="/Assets/avalonia-logo.ico" Width="100" Height="150" HorizontalAlignment="Center"/> 
         <!-- <TextBlock Text="LOGO" FontSize="32" HorizontalAlignment="Center" Margin="0,20,0,10"/> -->
 
         <!-- Welcome Message -->
