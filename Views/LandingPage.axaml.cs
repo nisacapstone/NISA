@@ -1,12 +1,11 @@
+using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
+using Avalonia.Media;
 using Avalonia.Interactivity;
 using System;
 using NISA.Views;
-using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Input;
-
-// nadine was here
 
 namespace NISA.Views
 {
@@ -15,6 +14,31 @@ namespace NISA.Views
         public LandingPage()
         {
             InitializeComponent();
+
+            // Attach mouse event handlers
+            CorrugatedHornBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
+            CorrugatedHornBorder.AddHandler(PointerExitedEvent, OnBorderPointerLeave);
+
+            CrossGuideCouplerBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
+            CrossGuideCouplerBorder.AddHandler(PointerExitedEvent, OnBorderPointerLeave);
+        }
+
+        private void OnBorderPointerEnter(object ? sender, PointerEventArgs e)
+        {
+            if (sender is Border border)
+            {
+                // Scale up the border when hovered
+                border.RenderTransform = new ScaleTransform(1.1, 1.1); // Scale to 110%
+            }
+        }
+
+        private void OnBorderPointerLeave(object ? sender, PointerEventArgs e)
+        {
+            if (sender is Border border)
+            {
+                // Reset the scale when the pointer leaves
+                border.RenderTransform = new ScaleTransform(1.0, 1.0); // Reset to 100%
+            }
         }
 
         private void OnCorrugatedHornClick(object? sender, PointerPressedEventArgs e)
@@ -37,4 +61,5 @@ namespace NISA.Views
         }
 
     }
-}
+    }
+
