@@ -15,21 +15,21 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NISA
-build_property.ProjectDir = /Users/sahra242/NISA/
+build_property.ProjectDir = /Users/nadineissa/NISA/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/Users/sahra242/NISA/App.axaml]
+[/Users/nadineissa/NISA/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/sahra242/NISA/Views/CorrugatedHorn.axaml]
+[/Users/nadineissa/NISA/Views/CorrugatedHorn.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/sahra242/NISA/Views/LandingPage.axaml]
+[/Users/nadineissa/NISA/Views/LandingPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/sahra242/NISA/Views/MainWindow.axaml]
+[/Users/nadineissa/NISA/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/sahra242/NISA/Views/NewPage.axaml]
+[/Users/nadineissa/NISA/Views/NewPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

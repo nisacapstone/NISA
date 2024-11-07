@@ -1520,19 +1520,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/sahra242/.nuget/packages/": {}
+    "/Users/nadineissa/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sahra242/NISA/NISA.csproj",
+      "projectUniqueName": "/Users/nadineissa/NISA/NISA.csproj",
       "projectName": "NISA",
-      "projectPath": "/Users/sahra242/NISA/NISA.csproj",
-      "packagesPath": "/Users/sahra242/.nuget/packages/",
-      "outputPath": "/Users/sahra242/NISA/obj/",
+      "projectPath": "/Users/nadineissa/NISA/NISA.csproj",
+      "packagesPath": "/Users/nadineissa/.nuget/packages/",
+      "outputPath": "/Users/nadineissa/NISA/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sahra242/.nuget/NuGet/NuGet.Config"
+        "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1550,6 +1550,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1597,7 +1602,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/8.0.8_1/libexec/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

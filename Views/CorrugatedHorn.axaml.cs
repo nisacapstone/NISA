@@ -29,6 +29,10 @@ namespace NISA.Views
 
         }
 
+        private void OnRedoClick(object  sender, RoutedEventArgs e ){
+            
+        }
+
         private void OnResetClick(object sender, RoutedEventArgs e)
         {
             // Clear all text boxes
