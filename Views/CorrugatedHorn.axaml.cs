@@ -12,6 +12,7 @@ namespace NISA.Views
        public CorrugatedHorn()
        {
            InitializeComponent();
+           
        }
 
 

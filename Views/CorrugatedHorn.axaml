@@ -1,102 +1,102 @@
+
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="NISA.Views.CorrugatedHorn">
-             
+             x:Class="NISA.Views.CorrugatedHorn"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch">
+    
     <Grid>
-        <!-- <Border Height="100" Background="#203354" HorizontalAlignment="Stretch" VerticalAlignment="Top"/> -->
-        <TextBlock Text="Corrugated Horn" FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Foreground="#203354" FontWeight="8"/>
-        <Button Width="60" Click="OnBackButtonClick" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Margin="20,40,10,10">
+        <!-- Set up rows and columns for layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header Section -->
+        <TextBlock Text="Corrugated Horn" FontSize="55" Grid.Row="0" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Foreground="#203354" FontWeight="8"/>
+
+        <!-- Back Button -->
+        <Button Width="60" Height="30" Click="OnBackButtonClick" Grid.Row="0" Grid.Column="0" 
+                HorizontalAlignment="Left" Margin="20,10,0,0" Background="#7393B3">
             <Image Source="/Assets/home.png" Width="60" Height="30"/>
         </Button>
 
-        <!-- <Button Content="Back to Landing Page" FontSize="15" Click="OnBackButtonClick" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Height="30" Margin="10,10,0,0"/> -->
-        <Border Background="#6B88A5" BorderThickness="2"  Margin="50,150,50,700" Padding="10" CornerRadius="5">
+        <!-- Control Panel with buttons in a horizontal StackPanel, aligned on the left -->
+        <Border Background="#6B88A5" BorderThickness="2" Grid.Row="1" Grid.ColumnSpan="2" 
+                Padding="5" CornerRadius="5" Margin="50,30,50,0">
             <DockPanel LastChildFill="False">
-                <StackPanel Height="50" Width="120"  Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Image Source="/Assets/undo.png" Width="60" Height="30" Margin="5"/>
-                    <Image Source="/Assets/redo.png" Width="60" Height="30"/>
-                    <Image Source="/Assets/import-export.png" Width="60" Height="30" Margin="5"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                        <Image Source="/Assets/undo.png" Width="60" Height="30"/>
+                    </Button>
+                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                        <Image Source="/Assets/redo.png" Width="60" Height="30"/>
+                    </Button>
+                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                        <Image Source="/Assets/import-export.png" Width="60" Height="30"/>
+                    </Button>
                 </StackPanel>
 
-                <StackPanel Height="50" Width="120"  Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
+                <!-- Help and Feedback Icons -->
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
                     <Image Source="/Assets/question.png" Width="60" Height="30" Margin="5"/>
                     <Image Source="/Assets/feedback.png" Width="60" Height="30" Margin="5"/>
                 </StackPanel>
-                
-
             </DockPanel>
         </Border>
 
-       
+        <!-- Input Section Label -->
+        <TextBlock Text="Please Input The Design Parameters Below:" FontSize="28" Grid.Row="2" Grid.ColumnSpan="2" 
+                   HorizontalAlignment="Left" Margin="50,50,0,0" Foreground="Black"/>
 
-        <TextBlock Text="Please Input The Design Parameters Below:" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,280,0,0" Foreground="Black"/>
-        
+        <!-- First Column for Inputs (X1-X4) with Reset and Submit Buttons below -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="75,130,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X1" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X2" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX2" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X3" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX3" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X4" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX4" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
 
-        <!-- <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,120,50,0">
-            <TabItem Header="Tab 1">
-                <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 1" FontSize="20" Margin="10"/>
-                </Border>
-            </TabItem>
-            <TabItem Header="Tab 2">
-                <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 2" FontSize="20" Margin="10"/>
-                </Border>
-            </TabItem>
-            <TabItem Header="Tab 3">
-                <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 3" FontSize="20" Margin="10"/>
-                </Border>
-            </TabItem>
-        </TabControl>
-
-        <TextBlock Text="Please Input The Design Parameters Below:" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,280,0,0" Foreground="Black"/>
-         -->
-
-        <StackPanel HorizontalAlignment="Left" Margin="75,330,0,0">
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X1" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X2" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX2" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X3" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX3" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X4" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX4" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-      </StackPanel>
-
-      <StackPanel HorizontalAlignment="Left" Margin="260,330,0,0">
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X5" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX5" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X6" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX6" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-          <StackPanel Orientation="Horizontal" Margin="0,25,0,0">
-              <TextBlock Text="X7" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-              <TextBox Name="TextBoxX7" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
-          </StackPanel>
-      </StackPanel>
-
-
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="130,480,0,0" Spacing="25">
-            <Button Content="Reset" FontSize="30" Width="120" Height="55" Click="OnResetClick" Foreground="White" Background="#c30010" Margin="0,10,0,0"/>
-            <Button Content="Submit" FontSize="30" Width="120" Height="55" Click="OnSubmitClick" Foreground="White" Background="#157759" Margin="0,10,0,0"/>
+            <!-- Reset and Submit Buttons placed right below X4 TextBox -->
+            <StackPanel Orientation="Horizontal" Margin="50,50,0,0" Spacing="40">
+                <Button Content="Reset" FontSize="30" Width="120" Height="55" Click="OnResetClick" Foreground="White" Background="#c30010"/>
+                <Button Content="Submit" FontSize="30" Width="120" Height="55" Click="OnSubmitClick" Foreground="White" Background="#157759"/>
+            </StackPanel>
         </StackPanel>
 
-
-        <Border Background="White" Width="400" Height="360" CornerRadius="5" Margin="650,100,0,0">
+        <!-- Second Column for Inputs (X5-X7) -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="300,130,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X5" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX5" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X6" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX6" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="X7" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
+                <TextBox Name="TextBoxX7" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+            </StackPanel>
+        </StackPanel>
+         <Border Grid.Row = "2" Grid.ColumnSpan= "2" Background="White" Width="400" Height="360" CornerRadius="5" Margin= "600,0,0,0">
         </Border>
-
-          
     </Grid>
 </UserControl>

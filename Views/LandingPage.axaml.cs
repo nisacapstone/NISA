@@ -14,6 +14,7 @@ namespace NISA.Views
         public LandingPage()
         {
             InitializeComponent();
+            
 
             // Attach mouse event handlers
             CorrugatedHornBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
@@ -22,6 +23,8 @@ namespace NISA.Views
             CrossGuideCouplerBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
             CrossGuideCouplerBorder.AddHandler(PointerExitedEvent, OnBorderPointerLeave);
         }
+        
+
 
         private void OnBorderPointerEnter(object ? sender, PointerEventArgs e)
         {
