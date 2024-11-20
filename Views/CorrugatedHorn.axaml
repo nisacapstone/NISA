@@ -32,10 +32,10 @@
                 Padding="5" CornerRadius="5" Margin="50,30,50,0">
             <DockPanel LastChildFill="False">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                    <Button Width="60" Height="30" Click="OnUndoClick" Margin="5" Background="#6B88A5">
                         <Image Source="/Assets/undo.png" Width="60" Height="30"/>
                     </Button>
-                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                    <Button Width="60" Height="30" Click="OnRedoClick" Margin="5" Background="#6B88A5">
                         <Image Source="/Assets/redo.png" Width="60" Height="30"/>
                     </Button>
                     <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
@@ -59,19 +59,19 @@
         <StackPanel Grid.Row="2" Grid.Column="0" Margin="75,130,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X1" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X2" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX2" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX2" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X3" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX3" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX3" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X4" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX4" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX4" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
 
             <!-- Reset and Submit Buttons placed right below X4 TextBox -->
@@ -85,15 +85,15 @@
         <StackPanel Grid.Row="2" Grid.Column="0" Margin="300,130,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X5" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX5" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX5" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X6" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX6" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX6" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                 <TextBlock Text="X7" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX7" Width="120" Height="55" Watermark="Enter" FontSize="30"/>
+                <TextBox Name="TextBoxX7" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
             </StackPanel>
         </StackPanel>
          <Border Grid.Row = "2" Grid.ColumnSpan= "2" Background="White" Width="400" Height="360" CornerRadius="5" Margin= "600,0,0,0">

@@ -14,7 +14,6 @@ namespace NISA.Views
         public LandingPage()
         {
             InitializeComponent();
-            
 
             // Attach mouse event handlers
             CorrugatedHornBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
@@ -22,11 +21,19 @@ namespace NISA.Views
 
             CrossGuideCouplerBorder.AddHandler(PointerEnteredEvent, OnBorderPointerEnter);
             CrossGuideCouplerBorder.AddHandler(PointerExitedEvent, OnBorderPointerLeave);
+
+            var iconBorder = this.FindControl<Border>("CorrugatedHornBorder");
+            if (iconBorder != null)
+            {
+                ToolTip.SetTip(iconBorder, "View detailed specifications and descriptions for the Corrugated Horn component.");
+            }
+            else
+            {
+                Console.WriteLine("CorrugatedHornBorder not found.");
+            }
         }
-        
 
-
-        private void OnBorderPointerEnter(object ? sender, PointerEventArgs e)
+        private void OnBorderPointerEnter(object? sender, PointerEventArgs e)
         {
             if (sender is Border border)
             {
@@ -35,7 +42,7 @@ namespace NISA.Views
             }
         }
 
-        private void OnBorderPointerLeave(object ? sender, PointerEventArgs e)
+        private void OnBorderPointerLeave(object? sender, PointerEventArgs e)
         {
             if (sender is Border border)
             {
@@ -64,5 +71,5 @@ namespace NISA.Views
         }
 
     }
-    }
+}
 

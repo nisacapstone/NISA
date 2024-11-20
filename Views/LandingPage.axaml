@@ -1,72 +1,3 @@
-<!-- <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="NISA.Views.LandingPage"
-             Background="#7393B3"> -->
-
-    <!-- <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>  For the logo -->
-            <!-- <RowDefinition Height="2*"/>     For the main content -->
-            <!-- <RowDefinition Height="*"/>     For spacing below -->
-        <!-- </Grid.RowDefinitions>
-        <Image Source="/Assets/LOGO3.png" Width="300" Height="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,10"/> 
- -->
-
-        <!-- Logo at the top -->
-        
-        <!-- <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
-            <Image Source="/Assets/LOGO.png" Width="300" Height="400" HorizontalAlignment="Center"/> 
-        </StackPanel> -->
-
-        <!-- <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="50,180,50,0">
-            <TabItem Header="All"> -->
-                <!-- <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 1" FontSize="20" Margin="10"/>
-                </Border> -->
-            <!-- </TabItem>
-            <TabItem Header="Horns"> -->
-                <!-- <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 2" FontSize="20" Margin="10"/>
-                </Border> -->
-            <!-- </TabItem>
-            <TabItem Header="Wire"> -->
-                <!-- <Border BorderBrush="Black" BorderThickness="2" Margin="10" Padding="10" CornerRadius="5">
-                    <TextBlock Text="Content for Tab 3" FontSize="20" Margin="10"/>
-                </Border> -->
-            <!-- </TabItem>
-            <TabItem Header="Reflectors">
-            </TabItem>
-            <TabItem Header="Arrays">
-            </TabItem>
-            <TabItem Header="Transitions">
-            </TabItem>
-            <TabItem Header="Constructions">
-            </TabItem>
-        </TabControl> -->
-         
-
-        <!-- Main Content Area for the two clickable items -->
-        <!-- <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,10">
-            <Border x:Name="CorrugatedHornBorder" Background="White" Width="400" Height="450" Margin="100" CornerRadius="5"
-                    PointerPressed="OnCorrugatedHornClick">
-                <StackPanel>
-                    <Image Source="/Assets/CorrugatedHornAntenna.png" Width="350" Height="350" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Corrugated Horn" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="Black"/>
-                </StackPanel>
-            </Border>
-
-            <Border x:Name="CrossGuideCouplerBorder" Background="White" Width="400" Height="450" Margin="100" CornerRadius="5"
-                    PointerPressed="OnCrossGuideCouplerClick">
-                <StackPanel>
-                    <Image Source="/Assets/CrossGuideCoupler.jpg" Width="400" Height="350" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Cross guide coupler" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Foreground="Black"/>
-                </StackPanel>
-            </Border>
-        </StackPanel>
-
-        
-    </Grid>
-</UserControl> -->
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="NISA.Views.LandingPage"
@@ -90,22 +21,41 @@
             <TabItem Header="Transitions"/>
             <TabItem Header="Constructions"/>
         </TabControl>
+        
 
         <StackPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" Spacing="50">
-            <Border x:Name="CorrugatedHornBorder" Background="White" Width="230" Height="280" Margin= "50,0,0,0" CornerRadius="5"
-                    PointerPressed="OnCorrugatedHornClick">
-                <StackPanel>
-                    <Image Source="/Assets/CorrugatedHornAntenna.png" Width="180" HorizontalAlignment="Center" Margin="0,50,0,0"/>
-                    <TextBlock Text="Corrugated Horn" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black"  Margin="0,40,0,0"/>
-                </StackPanel>
-            </Border>
+        
+<Border x:Name="CorrugatedHornBorder" Background="White" Width="230" Height="280" Margin="50,0,0,0" CornerRadius="5"
+        PointerPressed="OnCorrugatedHornClick">
+    <Grid>
+        <!-- Info Icon positioned in the top-right corner -->
+         <!-- Info Icon positioned in the top-right corner -->
+        <Border Width="20" Height="20" Background="#C0C0C0" CornerRadius="10" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"
+                ToolTip.Tip="View detailed specifications and descriptions for the Corrugated Horn component.">
+            <TextBlock Text="i" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="12"/>
+        </Border> 
 
+        <!-- Image and Text in a centered StackPanel -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/Assets/CorrugatedHornAntenna.png" Width="180" HorizontalAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Corrugated Horn" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" Margin="0,40,0,0"/>
+        </StackPanel>
+    </Grid>
+</Border>
             <Border x:Name="CrossGuideCouplerBorder" Background="White" Width="230" Height="280" CornerRadius="5"
                     PointerPressed="OnCrossGuideCouplerClick">
+        <Grid>
+        <!-- Info Icon positioned in the top-right corner -->
+        <Border Width="20" Height="20" Background="#C0C0C0" CornerRadius="10" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"
+                ToolTip.Tip="View detailed specifications and descriptions for the Cross Guide Coupler component.">
+            <TextBlock Text="i" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="12"/>
+        </Border> 
+
                 <StackPanel>
                     <Image Source="/Assets/CrossGuideCoupler.jpg" Width="180" HorizontalAlignment="Center" Margin="0,50,0,0"/>
                     <TextBlock Text="Cross guide coupler" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" Margin="0,40,0,0"/>
                 </StackPanel>
+            </Grid>
             </Border>
         </StackPanel>
     </Grid>
