@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nadineissa/NISA/NISA.csproj": {}
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {}
   },
   "projects": {
-    "/Users/nadineissa/NISA/NISA.csproj": {
+    "/Users/nadineissa/Desktop/NISA/NISA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nadineissa/NISA/NISA.csproj",
+        "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
         "projectName": "NISA",
-        "projectPath": "/Users/nadineissa/NISA/NISA.csproj",
+        "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
         "packagesPath": "/Users/nadineissa/.nuget/packages/",
-        "outputPath": "/Users/nadineissa/NISA/obj/",
+        "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
@@ -66,6 +66,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "Python.Runtime": {
+              "target": "Package",
+              "version": "[2.7.9, )"
             }
           },
           "imports": [

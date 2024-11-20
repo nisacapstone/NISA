@@ -461,6 +461,9 @@
           "lib/net5.0/MicroCom.Runtime.dll": {}
         }
       },
+      "Python.Runtime/2.7.9": {
+        "type": "package"
+      },
       "SkiaSharp/2.88.8": {
         "type": "package",
         "dependencies": {
@@ -1248,6 +1251,18 @@
         "microcom.runtime.nuspec"
       ]
     },
+    "Python.Runtime/2.7.9": {
+      "sha512": "NBS5t9KJvBVDoAFsVOQ79Ri133Hir8O6sqcEZJufXLVvlReXvzyZKhkcO5fpWcqjj6798qrWd/tO/TXCx2Ga7g==",
+      "type": "package",
+      "path": "python.runtime/2.7.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "python.exe",
+        "python.runtime.2.7.9.nupkg.sha512",
+        "python.runtime.nuspec"
+      ]
+    },
     "SkiaSharp/2.88.8": {
       "sha512": "bRkp3uKp5ZI8gXYQT57uKwil1uobb2p8c69n7v5evlB/2JNcMAXVcw9DZAP5Ig3WSvgzGm2YSn27UVeOi05NlA==",
       "type": "package",
@@ -1516,7 +1531,8 @@
       "Avalonia.Diagnostics >= 11.1.0",
       "Avalonia.Fonts.Inter >= 11.1.0",
       "Avalonia.Themes.Fluent >= 11.1.0",
-      "CommunityToolkit.Mvvm >= 8.2.1"
+      "CommunityToolkit.Mvvm >= 8.2.1",
+      "Python.Runtime >= 2.7.9"
     ]
   },
   "packageFolders": {
@@ -1525,11 +1541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nadineissa/NISA/NISA.csproj",
+      "projectUniqueName": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
       "projectName": "NISA",
-      "projectPath": "/Users/nadineissa/NISA/NISA.csproj",
+      "projectPath": "/Users/nadineissa/Desktop/NISA/NISA.csproj",
       "packagesPath": "/Users/nadineissa/.nuget/packages/",
-      "outputPath": "/Users/nadineissa/NISA/obj/",
+      "outputPath": "/Users/nadineissa/Desktop/NISA/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nadineissa/.nuget/NuGet/NuGet.Config"
@@ -1584,6 +1600,10 @@
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
+          },
+          "Python.Runtime": {
+            "target": "Package",
+            "version": "[2.7.9, )"
           }
         },
         "imports": [

@@ -8,7 +8,8 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="NISA"
-        Background="#7393B3">
+        Background="#7393B3"
+        >
     <Grid>
         <ContentControl x:Name="ContentArea" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
