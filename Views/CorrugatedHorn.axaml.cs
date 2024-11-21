@@ -7,13 +7,16 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Avalonia.Controls.ApplicationLifetimes;
 
 namespace NISA.Views
 {
     public partial class CorrugatedHorn : UserControl
     {
-        //private readonly string _defaultStlFilePath = "/Users/nadineissa/Downloads/Horn.stl";
-        //private readonly string _defaultStlFilePath = "/Assets/Horn.stl";
+       // Stacks to store undo/redo states
+        private Stack<string[]> undoStack = new Stack<string[]>();
+        private Stack<string[]> redoStack = new Stack<string[]>(); 
 
         private readonly string _defaultStlFilePath = Path.Combine(AppContext.BaseDirectory, "Assets", "Horn.stl");
 
@@ -155,22 +158,51 @@ translate([{_translateX}, {_translateY}, {_translateZ}])
         }
         private void OnRedoClick(object? sender, RoutedEventArgs e)
         {
-            // Handle redo logic
+            if (redoStack.Count > 0)
+            {
+                // Restore the state from the redo stack
+                var redoState = redoStack.Pop();
+                TextBoxX1.Text = redoState[0];
+                TextBoxX2.Text = redoState[1];
+                TextBoxX3.Text = redoState[2];
+                TextBoxX4.Text = redoState[3];
+
+                // Optionally, clear the redo stack if you don't want to keep multiple redo states
+                // redoStack.Clear();
+            }
         }
 
         private void OnUndoClick(object? sender, RoutedEventArgs e)
         {
-            // Handle undo logic
+             // Save the current state to the redo stack before modifying it
+            string[] currentState = new string[]
+            {
+                TextBoxX1?.Text ?? string.Empty,
+                TextBoxX2?.Text ?? string.Empty,
+                TextBoxX3?.Text ?? string.Empty,
+                TextBoxX4?.Text ?? string.Empty
+            };
+
+            redoStack.Push(currentState); // Push the current state to redo stack
+
+            // Clear the textboxes (reset)
+            if (TextBoxX1 != null) TextBoxX1.Text = string.Empty;
+            if (TextBoxX2 != null) TextBoxX2.Text = string.Empty;
+            if (TextBoxX3 != null) TextBoxX3.Text = string.Empty;
+            if (TextBoxX4 != null) TextBoxX4.Text = string.Empty;
+
+            // Clear the undo stack since we performed a reset
+            undoStack.Clear();
         }
 
         private void OnExportClick(object? sender, RoutedEventArgs e)
         {
             // Handle export logic
         }
-         private void OnSubmitClick(object sender, RoutedEventArgs e)
-         {
+        private void OnSubmitClick(object sender, RoutedEventArgs e)
+        {
 
-         }
+        }
         private void OnCutStlClick(object? sender, RoutedEventArgs e)
         {
             try
@@ -184,7 +216,7 @@ translate([{_translateX}, {_translateY}, {_translateZ}])
                 string selectedPlane = GetSelectedPlane();
                 string outputPngPath = Path.Combine(Path.GetTempPath(), "CutHornOutput.png");
                 string scriptPath = Path.Combine(Path.GetTempPath(), "cut_model.scad");
-                    // Generate the OpenSCAD script for cuttin
+                // Generate the OpenSCAD script for cuttin
                 string scadScript = selectedPlane switch
                 {
                     "XY" => $@"
@@ -208,7 +240,7 @@ translate([{_translateX}, {_translateY}, {_translateZ}])
                 Debug.WriteLine("Generated OpenSCAD Script:");
                 Debug.WriteLine(scadScript);
 
-                    // Save the script and render the result
+                // Save the script and render the result
                 if (File.Exists(outputPngPath)) File.Delete(outputPngPath);
                 File.WriteAllText(scriptPath, scadScript);
 
@@ -233,7 +265,7 @@ translate([{_translateX}, {_translateY}, {_translateZ}])
                     throw new Exception($"OpenSCAD rendering failed: {error}");
                 }
 
-                    // Force reload the image
+                // Force reload the image
                 Dispatcher.UIThread.Invoke(() =>
                 {
                     if (File.Exists(outputPngPath))
@@ -272,4 +304,5 @@ translate([{_translateX}, {_translateY}, {_translateZ}])
 
     }
 }
+
 
