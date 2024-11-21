@@ -1,102 +1,106 @@
-
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="NISA.Views.CorrugatedHorn"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
-    
     <Grid>
-        <!-- Set up rows and columns for layout -->
+        <!-- Define rows and columns -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/> <!-- Header -->
+            <RowDefinition Height="Auto"/> <!-- Buttons -->
+            <RowDefinition Height="Auto"/> <!-- Inputs -->
+            <RowDefinition Height="*"/>    <!-- Rendered Image -->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/> <!-- Input and Sliders -->
+            <ColumnDefinition Width="3*"/> <!-- Rendered Image -->
         </Grid.ColumnDefinitions>
 
         <!-- Header Section -->
-        <TextBlock Text="Corrugated Horn" FontSize="55" Grid.Row="0" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" Foreground="#203354" FontWeight="8"/>
+        <TextBlock Text="Corrugated Horn" FontSize="45" Grid.Row="0" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" Margin="0,20,0,10" Foreground="#203354" FontWeight="Bold"/>
 
         <!-- Back Button -->
-        <Button Width="60" Height="30" Click="OnBackButtonClick" Grid.Row="0" Grid.Column="0" 
-                HorizontalAlignment="Left" Margin="20,10,0,0" Background="#7393B3">
-            <Image Source="/Assets/home.png" Width="60" Height="30"/>
+        <Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" Width="50" Height="30"
+                Click="OnBackButtonClick" Background="#7393B3">
+            <Image Source="/Assets/home.png" Width="30" Height="30"/>
         </Button>
 
-        <!-- Control Panel with buttons in a horizontal StackPanel, aligned on the left -->
-        <Border Background="#6B88A5" BorderThickness="2" Grid.Row="1" Grid.ColumnSpan="2" 
-                Padding="5" CornerRadius="5" Margin="50,30,50,0">
-            <DockPanel LastChildFill="False">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Width="60" Height="30" Click="OnUndoClick" Margin="5" Background="#6B88A5">
+        <!-- Control Panel Buttons -->
+        <Border Background="#6B88A5" Grid.Row="1" Grid.ColumnSpan="2" Padding="10" CornerRadius="10" Margin="20,10,20,10">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10">
+                    <Button Width="70" Height="30" Click="OnUndoClick" Background="#6B88A5">
                         <Image Source="/Assets/undo.png" Width="60" Height="30"/>
                     </Button>
-                    <Button Width="60" Height="30" Click="OnRedoClick" Margin="5" Background="#6B88A5">
+                    <Button Width="70" Height="30" Click="OnRedoClick" Content="Undo" Background="#6B88A5">
                         <Image Source="/Assets/redo.png" Width="60" Height="30"/>
-                    </Button>
-                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                     </Button>
+                    <Button Width="70" Height="30" Click="OnExportClick" Background="#6B88A5">
                         <Image Source="/Assets/import-export.png" Width="60" Height="30"/>
                     </Button>
                 </StackPanel>
 
-                <!-- Help and Feedback Icons -->
-                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
-                    <Image Source="/Assets/question.png" Width="60" Height="30" Margin="5"/>
-                    <Image Source="/Assets/feedback.png" Width="60" Height="30" Margin="5"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10" DockPanel.Dock="Right">
+                    <Button Width="70" Height="30" Content="Help" Background="#6B88A5" >
+                        <Image Source="/Assets/question.png" Width="60" Height="30" Margin="5"/>  
+                    </Button> 
+                    <Button Width="70" Height="30" Content="Feedback" Background="#6B88A5" >
+                        <Image Source="/Assets/feedback.png" Width="60" Height="30" Margin="5"/>
+                    </Button>
+
                 </StackPanel>
             </DockPanel>
         </Border>
 
-        <!-- Input Section Label -->
-        <TextBlock Text="Please Input The Design Parameters Below:" FontSize="28" Grid.Row="2" Grid.ColumnSpan="2" 
-                   HorizontalAlignment="Left" Margin="50,50,0,0" Foreground="Black"/>
+        <!-- Input Section -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,30,20,10" Spacing="10">
+            <TextBlock Text="Input Design Parameters:" FontSize="28" Foreground="Black" Margin="0,0,0,10"/>
+            <UniformGrid Rows="4" Columns="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,10">
+                <TextBlock Text="X1" VerticalAlignment="Center" FontSize="25" Foreground="Black"/>
+                <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" Margin="5,0,0,0"/>
+                <TextBlock Text="X2" VerticalAlignment="Center" FontSize="16" Foreground="Black"/>
+                <TextBox Name="TextBoxX2" Width="150" Height="30" Watermark="Enter"/>
+                <TextBlock Text="X3" VerticalAlignment="Center" FontSize="16" Foreground="Black"/>
+                <TextBox Name="TextBoxX3" Width="150" Height="30" Watermark="Enter"/>
+                <TextBlock Text="X4" VerticalAlignment="Center" FontSize="16" Foreground="Black"/>
+                <TextBox Name="TextBoxX4" Width="150" Height="30" Watermark="Enter"/>
+            </UniformGrid>
 
-        <!-- First Column for Inputs (X1-X4) with Reset and Submit Buttons below -->
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="75,130,0,0">
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X1" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX1" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X2" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX2" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X3" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX3" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X4" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX4" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
-            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="40">
+                <Button Content="Reset" FontSize="30" Width="120" Height="55" Click="OnResetClick" Background="#c30010" Foreground="White"/>
+                <Button Content="Submit" FontSize="30" Width="120" Height="55" Click="OnSubmitClick" Background="#157759" Foreground="White"/>
+                <Button Content="Generate Model" FontSize="30" Width="250" Height="55" Click="OnGenerateClick" Background="#203354" Foreground="White"/>
+                <Button Content="Cut STL" Width="150" Height="40" Click="OnCutStlClick" Background="#FF8C00" Foreground="White"/>
 
-            <!-- Reset and Submit Buttons placed right below X4 TextBox -->
-            <StackPanel Orientation="Horizontal" Margin="50,50,0,0" Spacing="40">
-                <Button Content="Reset" FontSize="30" Width="120" Height="55" Click="OnResetClick" Foreground="White" Background="#c30010"/>
-                <Button Content="Submit" FontSize="30" Width="120" Height="55" Click="OnSubmitClick" Foreground="White" Background="#157759"/>
             </StackPanel>
         </StackPanel>
 
-        <!-- Second Column for Inputs (X5-X7) -->
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="300,130,0,0">
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X5" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX5" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
+        <!-- Sliders Section -->
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="20,0,20,10" Spacing="15">
+            <TextBlock Text="Translation (X, Y, Z)" FontSize="18" Foreground="Black"/>
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <Slider Name="TranslateXSlider" Minimum="-100" Maximum="100" Width="150"/>
+                <Slider Name="TranslateYSlider" Minimum="-100" Maximum="100" Width="150"/>
+                <Slider Name="TranslateZSlider" Minimum="-100" Maximum="100" Width="150"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X6" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX6" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
+            <TextBlock Text="Rotation (X, Y, Z)" FontSize="18" Foreground="Black" Margin="0,10,0,0"/>
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <Slider Name="RotateXSlider" Minimum="0" Maximum="360" Width="150"/>
+                <Slider Name="RotateYSlider" Minimum="0" Maximum="360" Width="150"/>
+                <Slider Name="RotateZSlider" Minimum="0" Maximum="360" Width="150"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock Text="X7" VerticalAlignment="Center" FontSize="25" Margin="0,0,20,0" Foreground="Black"/>
-                <TextBox Name="TextBoxX7" Width="120" Height="55" Watermark="Enter" FontSize="30" KeyDown="OnKeyDown"/>
-            </StackPanel>
+            <TextBlock Text="Select Cutting Plane:" FontSize="18" Foreground="Black" Margin="0,20,0,0"/>
+            <ComboBox Name="PlaneSelection" Width="150" Height="30">
+                <ComboBoxItem Content="XY" IsSelected="True"/>
+                <ComboBoxItem Content="YZ"/>
+                <ComboBoxItem Content="XZ"/>
+            </ComboBox>
         </StackPanel>
-         <Border Grid.Row = "2" Grid.ColumnSpan= "2" Background="White" Width="400" Height="360" CornerRadius="5" Margin= "600,0,0,0">
+
+        <!-- Rendered Model Section -->
+        <Border Grid.Row="3" Grid.Column="1" Background="#FFFFFF" CornerRadius="10" Margin="20,0,20,10" Padding="10">
+            <Image Name="MyImageControl" Width="500" Height="400" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
     </Grid>
 </UserControl>

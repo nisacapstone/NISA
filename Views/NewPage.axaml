@@ -31,10 +31,10 @@
                 Padding="5" CornerRadius="5" Margin="50,30,50,0">
             <DockPanel LastChildFill="False">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                    <Button Width="60" Height="30" Click="OnUndoClick" Margin="5" Background="#6B88A5">
                         <Image Source="/Assets/undo.png" Width="60" Height="30"/>
                     </Button>
-                    <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
+                    <Button Width="60" Height="30" Click="OnRedoClick" Margin="5" Background="#6B88A5">
                         <Image Source="/Assets/redo.png" Width="60" Height="30"/>
                     </Button>
                     <Button Width="60" Height="30" Click="OnBackButtonClick" Margin="5" Background="#6B88A5">
